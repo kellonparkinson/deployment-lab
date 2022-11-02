@@ -6,8 +6,8 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
-app.use('/js', express.static(path.join(__dirname, '../index.js')))
-app.use('/css', express.static(path.join(__dirname, '../index.css')))
+// app.use('/js', express.static(path.join(__dirname, '../index.js')))
+// app.use('/css', express.static(path.join(__dirname, '../index.css')))
 
 const { home, javaScript, css } = require('./controllers/pageCtrl')
 
