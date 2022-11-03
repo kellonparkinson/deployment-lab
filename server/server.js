@@ -24,7 +24,8 @@ app.get('/', home)
 app.get('/js', javaScript)
 app.get('/css', css)
 app.post('/test', (req, res) => {
-    console.log(req.body)
+    rollbar.warn('button clicked')
+
     try {
         jidsovh()
     } catch (err) {
