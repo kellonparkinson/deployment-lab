@@ -5,9 +5,9 @@ module.exports = {
         res.sendFile(path.join(__dirname, '../../index.html'))
     },
     javaScript: (req, res) => {
-        res.sendFile(path.join(__dirname, '../../index.js'))
+        res.sendFile(path.join(__dirname, '../../main.js'))
     },
     css: (req, res) => {
-        res.sendFile(path.join(__dirname, '../../index.css'))
+        res.sendFile(path.join(__dirname, '../../styles.css'))
     }
 }

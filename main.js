@@ -5,7 +5,7 @@ var rollbar = new Rollbar({
   captureUnhandledRejections: true,
 })
 
-const errorButton = document.getElementsByClassName('test-critical-error')
+const errorButton = document.querySelector('button')
 
 const rollbarCritical = () => {
     axios
