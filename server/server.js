@@ -6,8 +6,17 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
-// app.use('/js', express.static(path.join(__dirname, '../index.js')))
-// app.use('/css', express.static(path.join(__dirname, '../index.css')))
+
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: process.env.ROLLBAR_TOKEN,
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+rollbar.log('Hello world!')
+// ------------------------------------------------
 
 const { home, javaScript, css } = require('./controllers/pageCtrl')
 
