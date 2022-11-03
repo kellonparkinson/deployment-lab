@@ -23,6 +23,13 @@ const { home, javaScript, css } = require('./controllers/pageCtrl')
 app.get('/', home)
 app.get('/js', javaScript)
 app.get('/css', css)
+app.post('/test', () => {
+    try {
+        jidsovh()
+    } catch (err) {
+        rollbar.critical(`Your app will self-destruct in 10 seconds. ${err}`)
+    }
+})
 
 const { PORT } = process.env
 app.listen(PORT, () => console.log(`Listening on ${PORT}`))
